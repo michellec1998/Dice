@@ -18,7 +18,9 @@ void draw()
 		boo.roll();
 		boo.show();
 	}
+
 }
+
 void mousePressed()
 {
 	redraw();
@@ -41,8 +43,14 @@ class Die //models one single dice cube
 	void show()
 	{
 		fill(255);
+		strokeWeight(1);
 		rect(myX, myY, 40, 40, 10);
 		fill(0);
-		ellipse()
+		strokeWeight(5);
+		//one
+		point(myX + 20, myY + 20);
+		//two 
+		point(myX + 15, myY + 15);
+
 	}
 }
