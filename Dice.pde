@@ -3,32 +3,32 @@ void setup()
 	size (500, 500);
 	noLoop();
 }
+
 void draw()
 {
-	//background ((int)Math.random()*255, (int)Math.random()*255, (int)Math.random()*255);
-	for (int x = 30; x < 450; x = x + 50)
+	background(204, 255, 229);
+	int numDots = 0;
+
+	for (int d = 30; d < 450; d = d + 50)
 	{
-		Die hey = new Die(x, 30); 
+		Die hey = new Die(d, d); 
 		hey.roll();
 		hey.show();
 	}
-	for (int y = 30; y < 450; y = y + 50)
-	{
-		Die boo = new Die (30, y);
-		boo.roll();
-		boo.show();
-	}
 
+	//text
+	textSize(15);
+	text("There are " + numDots + " dots!", 30, 450);
 }
 
 void mousePressed()
 {
 	redraw();
 }
+
 class Die //models one single dice cube
 {
-	int myX,myY;
-	//variable declarations here
+	int myX, myY;
 	Die(int x, int y) //constructor
 	{
 		roll();
@@ -45,12 +45,49 @@ class Die //models one single dice cube
 		fill(255);
 		strokeWeight(1);
 		rect(myX, myY, 40, 40, 10);
+		//points
 		fill(0);
 		strokeWeight(5);
-		//one
-		point(myX + 20, myY + 20);
-		//two 
-		point(myX + 15, myY + 15);
-
+		
 	}
 }
+
+class Dots 
+{
+	int myX, myY;
+	Dots(int x, int y)
+	{
+		
+	}
+	void show()
+	{
+				//one
+		//point(myX + 20, myY +20);
+		//two
+		/*point(myX + 15, myY + 15);
+		point(myX + 25, myY + 25); */
+		//three
+		/*point(myX + 20, myY + 15);
+		point(myX + 15, myY + 25);
+		point(myX + 25, myY + 25);*/
+		//four
+		/*point(myX + 15, myY + 15);
+		point(myX + 15, myY + 25);
+		point(myX + 25, myY + 15);
+		point(myX + 25, myY + 25);*/
+		//five
+		/*point(myX + 15, myY + 15);
+		point(myX + 15, myY + 25);
+		point(myX + 25, myY + 15);
+		point(myX + 25, myY + 25);
+		point(myX + 20, myY + 20);*/
+		//six
+		/*point(myX + 15, myY + 10);
+		point(myX + 15, myY + 20);
+		point(myX + 15, myY + 30);
+		point(myX + 25, myY + 10);
+		point(myX + 25, myY + 20);
+		point(myX + 25, myY + 30);*/
+	}
+}
+
