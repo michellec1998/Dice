@@ -15,7 +15,6 @@ void draw()
 		hey.roll();
 		hey.show();
 	}
-
 	//text
 	textSize(15);
 	text("There are " + numDots + " dots!", 30, 450);
@@ -38,7 +37,30 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		//your code here
+		/*if ((Math.random)() < .2)
+		{
+
+		}
+		if((Math.random)() < .4)
+		{
+
+		}
+		if(Math.random)() < .6)
+		{
+
+		}
+		if(Math.random() < .8)
+		{
+
+		}
+		if(Math.random() < .9)
+		{
+
+		}
+		else
+		{
+			
+		} */
 	}
 	void show()
 	{
@@ -57,11 +79,12 @@ class Dots
 	int myX, myY;
 	Dots(int x, int y)
 	{
-		
+		myX = x;
+		myY = y;
 	}
 	void show()
 	{
-				//one
+		//one
 		//point(myX + 20, myY +20);
 		//two
 		/*point(myX + 15, myY + 15);
