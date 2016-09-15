@@ -1,4 +1,4 @@
-int numDots;
+
 
 void setup()
 {
@@ -9,6 +9,7 @@ void setup()
 void draw()
 {
     background(204, 255, 229);
+    int numDots = 0;
     for (int d = 30; d < 500; d += 80)
     {
       for (int i = 30; i < 400; i += 50)
@@ -61,7 +62,7 @@ class Die
   
   //pips or dots
     if (pips == 1)
-    {
+    { 
       point(myX + 20, myY +20);
     }
     if (pips == 2)
